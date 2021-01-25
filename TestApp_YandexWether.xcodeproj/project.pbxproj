@@ -3,27 +3,37 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		748CC85325BF03A6007B266D /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748CC85225BF03A6007B266D /* City.swift */; };
 		74ADD03825BDB5BF00B5A8B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74ADD03725BDB5BF00B5A8B5 /* AppDelegate.swift */; };
 		74ADD03A25BDB5BF00B5A8B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74ADD03925BDB5BF00B5A8B5 /* SceneDelegate.swift */; };
-		74ADD03C25BDB5BF00B5A8B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74ADD03B25BDB5BF00B5A8B5 /* ViewController.swift */; };
 		74ADD03F25BDB5BF00B5A8B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74ADD03D25BDB5BF00B5A8B5 /* Main.storyboard */; };
 		74ADD04125BDB5C100B5A8B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74ADD04025BDB5C100B5A8B5 /* Assets.xcassets */; };
 		74ADD04425BDB5C100B5A8B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74ADD04225BDB5C100B5A8B5 /* LaunchScreen.storyboard */; };
+		74ADD04D25BDBD6E00B5A8B5 /* WetherJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74ADD04C25BDBD6E00B5A8B5 /* WetherJSON.swift */; };
+		74E2E18B25BF276A00CD149E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E2E18A25BF276A00CD149E /* MainViewController.swift */; };
+		74E2E19025BF77E500CD149E /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E2E18F25BF77E500CD149E /* InfoViewController.swift */; };
+		F14E932F8787591ED76C3F8D /* Pods_TestApp_YandexWether.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B72344A38A817FA2C633DAF /* Pods_TestApp_YandexWether.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B72344A38A817FA2C633DAF /* Pods_TestApp_YandexWether.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestApp_YandexWether.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		748CC85225BF03A6007B266D /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		74ADD03425BDB5BF00B5A8B5 /* TestApp_YandexWether.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp_YandexWether.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74ADD03725BDB5BF00B5A8B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74ADD03925BDB5BF00B5A8B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		74ADD03B25BDB5BF00B5A8B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		74ADD03E25BDB5BF00B5A8B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74ADD04025BDB5C100B5A8B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74ADD04325BDB5C100B5A8B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74ADD04525BDB5C100B5A8B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74ADD04C25BDBD6E00B5A8B5 /* WetherJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WetherJSON.swift; sourceTree = "<group>"; };
+		74E2E18A25BF276A00CD149E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		74E2E18F25BF77E500CD149E /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		DD49AF63C005289904850B50 /* Pods-TestApp_YandexWether.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp_YandexWether.debug.xcconfig"; path = "Target Support Files/Pods-TestApp_YandexWether/Pods-TestApp_YandexWether.debug.xcconfig"; sourceTree = "<group>"; };
+		EFADB9D4784F51B8416BCADF /* Pods-TestApp_YandexWether.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp_YandexWether.release.xcconfig"; path = "Target Support Files/Pods-TestApp_YandexWether/Pods-TestApp_YandexWether.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F14E932F8787591ED76C3F8D /* Pods_TestApp_YandexWether.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +53,8 @@
 			children = (
 				74ADD03625BDB5BF00B5A8B5 /* TestApp_YandexWether */,
 				74ADD03525BDB5BF00B5A8B5 /* Products */,
+				AA088C134D3AF1800D40D834 /* Pods */,
+				8CEE3F7A32228A116B7A1EFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +71,33 @@
 			children = (
 				74ADD03725BDB5BF00B5A8B5 /* AppDelegate.swift */,
 				74ADD03925BDB5BF00B5A8B5 /* SceneDelegate.swift */,
-				74ADD03B25BDB5BF00B5A8B5 /* ViewController.swift */,
+				74E2E18A25BF276A00CD149E /* MainViewController.swift */,
+				74E2E18F25BF77E500CD149E /* InfoViewController.swift */,
 				74ADD03D25BDB5BF00B5A8B5 /* Main.storyboard */,
 				74ADD04025BDB5C100B5A8B5 /* Assets.xcassets */,
 				74ADD04225BDB5C100B5A8B5 /* LaunchScreen.storyboard */,
 				74ADD04525BDB5C100B5A8B5 /* Info.plist */,
+				74ADD04C25BDBD6E00B5A8B5 /* WetherJSON.swift */,
+				748CC85225BF03A6007B266D /* City.swift */,
 			);
 			path = TestApp_YandexWether;
+			sourceTree = "<group>";
+		};
+		8CEE3F7A32228A116B7A1EFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B72344A38A817FA2C633DAF /* Pods_TestApp_YandexWether.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA088C134D3AF1800D40D834 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD49AF63C005289904850B50 /* Pods-TestApp_YandexWether.debug.xcconfig */,
+				EFADB9D4784F51B8416BCADF /* Pods-TestApp_YandexWether.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 74ADD04825BDB5C100B5A8B5 /* Build configuration list for PBXNativeTarget "TestApp_YandexWether" */;
 			buildPhases = (
+				E7284DC869435E9263348CDB /* [CP] Check Pods Manifest.lock */,
 				74ADD03025BDB5BF00B5A8B5 /* Sources */,
 				74ADD03125BDB5BF00B5A8B5 /* Frameworks */,
 				74ADD03225BDB5BF00B5A8B5 /* Resources */,
+				4B73D0E15CC3C4E627380B8D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,13 +167,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4B73D0E15CC3C4E627380B8D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestApp_YandexWether/Pods-TestApp_YandexWether-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestApp_YandexWether/Pods-TestApp_YandexWether-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestApp_YandexWether/Pods-TestApp_YandexWether-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7284DC869435E9263348CDB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestApp_YandexWether-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		74ADD03025BDB5BF00B5A8B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74ADD03C25BDB5BF00B5A8B5 /* ViewController.swift in Sources */,
+				74ADD04D25BDBD6E00B5A8B5 /* WetherJSON.swift in Sources */,
+				748CC85325BF03A6007B266D /* City.swift in Sources */,
+				74E2E18B25BF276A00CD149E /* MainViewController.swift in Sources */,
 				74ADD03825BDB5BF00B5A8B5 /* AppDelegate.swift in Sources */,
+				74E2E19025BF77E500CD149E /* InfoViewController.swift in Sources */,
 				74ADD03A25BDB5BF00B5A8B5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,12 +363,14 @@
 		};
 		74ADD04925BDB5C100B5A8B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD49AF63C005289904850B50 /* Pods-TestApp_YandexWether.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2NJA6A6R83;
 				INFOPLIST_FILE = TestApp_YandexWether/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,12 +384,14 @@
 		};
 		74ADD04A25BDB5C100B5A8B5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFADB9D4784F51B8416BCADF /* Pods-TestApp_YandexWether.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2NJA6A6R83;
 				INFOPLIST_FILE = TestApp_YandexWether/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
