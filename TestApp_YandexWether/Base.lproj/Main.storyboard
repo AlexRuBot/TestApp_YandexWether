@@ -25,30 +25,45 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="Pvd-xY-503" detailTextLabel="pIZ-TJ-t8K" style="IBUITableViewCellStyleValue1" id="brf-MQ-7E2">
-                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="50" id="brf-MQ-7E2" customClass="CustomTableViewCell" customModule="TestApp_YandexWether" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="414" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="brf-MQ-7E2" id="HWU-V8-zfG">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pvd-xY-503">
-                                            <rect key="frame" x="20" y="12" width="33" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Владивосток" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2f-xQ-JYr">
+                                            <rect key="frame" x="20" y="14.5" width="103" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pIZ-TJ-t8K">
-                                            <rect key="frame" x="350" y="12" width="44" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-100С" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUU-W3-A0v">
+                                            <rect key="frame" x="350.5" y="14.5" width="47.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Очень пасмурно" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgk-tI-Hvx">
+                                            <rect key="frame" x="140.5" y="14.5" width="133" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="a2f-xQ-JYr" firstAttribute="leading" secondItem="HWU-V8-zfG" secondAttribute="leadingMargin" id="EKG-dI-vwH"/>
+                                        <constraint firstItem="mgk-tI-Hvx" firstAttribute="centerX" secondItem="HWU-V8-zfG" secondAttribute="centerX" id="F7D-Kp-iav"/>
+                                        <constraint firstItem="hUU-W3-A0v" firstAttribute="centerY" secondItem="HWU-V8-zfG" secondAttribute="centerY" id="FL3-5H-Y1c"/>
+                                        <constraint firstAttribute="trailing" secondItem="hUU-W3-A0v" secondAttribute="trailing" constant="16" id="PWi-gK-s2c"/>
+                                        <constraint firstItem="mgk-tI-Hvx" firstAttribute="centerY" secondItem="HWU-V8-zfG" secondAttribute="centerY" id="a6f-qy-NqA"/>
+                                        <constraint firstItem="a2f-xQ-JYr" firstAttribute="centerY" secondItem="HWU-V8-zfG" secondAttribute="centerY" id="r2X-pf-MhT"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="cityNameLable" destination="a2f-xQ-JYr" id="74X-yd-HqZ"/>
+                                    <outlet property="conditionLable" destination="mgk-tI-Hvx" id="rDH-7h-hrr"/>
+                                    <outlet property="tempLable" destination="hUU-W3-A0v" id="8HG-hH-jOn"/>
                                     <segue destination="E5J-bO-B9n" kind="show" identifier="Show" id="fKi-iC-FV1"/>
                                 </connections>
                             </tableViewCell>

@@ -12,6 +12,7 @@ import Alamofire
 class MainViewController: UITableViewController, UISearchBarDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
+    
     var newCityTextField: UITextField?
     var wether: [WetherJSON] = []
     var citys: [City] = [City(city: "Калуга", lat: 54.5204, lon: 36.27),
@@ -32,24 +33,7 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
         
         addWether(cityArray: citys)
     }
-
-    func addWether(cityArray:[City]) {
-        for item in 0...cityArray.count - 1 {
-            let URL = "https://api.weather.yandex.ru/v2/forecast?lat=\(cityArray[item].lat)&lon=\(cityArray[item].lon)"
-
-            AF.request(URL, method: .get, encoding: JSONEncoding.default,
-                       headers: ["X-Yandex-API-Key": "aab0a824-ac3e-4a37-8f27-2d2e149ba7a0"]).validate().responseJSON { (dataResponse) in
-                        guard let data = dataResponse.data else { return }
-                        do {
-                            let param:WetherJSON = try JSONDecoder().decode(WetherJSON.self, from: data)
-                            self.wether.append(param)
-                            self.tableView.reloadData()
-                        } catch let error {
-                            print(error)
-                        }
-                       }
-        }
-    }
+    
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,9 +42,62 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = wether[indexPath.row].geoObject.locality.name
-        cell.detailTextLabel?.text = "Температура: \(wether[indexPath.row].fact.temp)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
+        cell.cityNameLable.text = wether[indexPath.row].geoObject.locality.name
+        cell.tempLable.text = "\(wether[indexPath.row].fact.temp)C"
+        
+        switch wether[indexPath.row].fact.condition {
+            case "clear":
+                cell.conditionLable.text = "Ясно"
+            case "partly-cloudy":
+                cell.conditionLable.text = "Малооблачно"
+            case "cloudy":
+                cell.conditionLable.text = "Облачно с прояснениями"
+            case "overcast":
+                cell.conditionLable.text = "Пасмурно"
+            case "drizzle":
+                cell.conditionLable.text = "Морось"
+            case "light-rain":
+                cell.conditionLable.text = "Небольшой дождь"
+            case "rain":
+                cell.conditionLable.text = "Дождь"
+            case "moderate-rain":
+                cell.conditionLable.text = "Умеренно сильный дождь"
+            case "heavy-rain":
+                cell.conditionLable.text = "Сильный дождь"
+            case "continuous-heavy-rain":
+                cell.conditionLable.text = "Длительный сильный дождь"
+            case "showers":
+                cell.conditionLable.text = "Ливень"
+            case "wet-snow":
+                cell.conditionLable.text = "Дождь со снегом"
+            case "light-snow":
+                cell.conditionLable.text = "Небольшой снег"
+            case "snow":
+                cell.conditionLable.text = "Снег"
+            case "snow-showers":
+                cell.conditionLable.text = "Снегопад"
+            case "hail":
+                cell.conditionLable.text = "Град"
+            case "thunderstorm":
+                cell.conditionLable.text = "Гроза"
+            case "thunderstorm-with-rain":
+                cell.conditionLable.text = "Дождь с грозой"
+            case "thunderstorm-with-hail":
+                cell.conditionLable.text = "Гроза с градом"
+            default:
+                cell.conditionLable.text = "Нет данных"
+        }
+        let url = URL(string: "https://yastatic.net/weather/i/icons/blueye/color/svg/\(wether[indexPath.row].fact.icon).svg")
+        var data: Data!
+        do {
+            data = try Data(contentsOf: url!)
+        }catch let error {
+            print(error)
+        }
+        
+        cell.imageView?.image = UIImage(data: data)
+        
         return cell
     }
     
@@ -93,6 +130,8 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
         if filterCitys.count == 0 { return } else { addWether(cityArray: filterCitys) }
     }
 
+    // MARK: - Add City
+    
     @IBAction func addCity(_ sender: Any) {
         
         let alert = UIAlertController(title: "Добавте город", message: nil, preferredStyle: .alert)
@@ -128,6 +167,26 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
             self.addWether(cityArray: self.citys)
             
             
+        }
+    }
+    
+    // MARK: - Parsing
+    
+    func addWether(cityArray:[City]) {
+        for item in 0...cityArray.count - 1 {
+            let URL = "https://api.weather.yandex.ru/v2/forecast?lat=\(cityArray[item].lat)&lon=\(cityArray[item].lon)"
+
+            AF.request(URL, method: .get, encoding: JSONEncoding.default,
+                       headers: ["X-Yandex-API-Key": "aab0a824-ac3e-4a37-8f27-2d2e149ba7a0"]).validate().responseJSON { (dataResponse) in
+                        guard let data = dataResponse.data else { return }
+                        do {
+                            let param:WetherJSON = try JSONDecoder().decode(WetherJSON.self, from: data)
+                            self.wether.append(param)
+                            self.tableView.reloadData()
+                        } catch let error {
+                            print(error)
+                        }
+                       }
         }
     }
 }

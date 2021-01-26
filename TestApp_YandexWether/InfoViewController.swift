@@ -32,48 +32,48 @@ class InfoViewController: UIViewController {
         pressureLable.text = "Давление: \(info.fact.pressure) мм р.с."
         
         switch info.fact.condition {
-        case "clear":
+            case "clear":
             conditionLable.text = "На улице: Ясно"
-        case "partly-cloudy":
+            case "partly-cloudy":
             conditionLable.text = "На улице: Малооблачно"
-        case "cloudy":
+            case "cloudy":
             conditionLable.text = "На улице: Облачно с прояснениями"
-        case "overcast":
+            case "overcast":
             conditionLable.text = "На улице: Пасмурно"
-        case "drizzle":
+            case "drizzle":
             conditionLable.text = "На улице: Морось"
-        case "light-rain":
+            case "light-rain":
             conditionLable.text = "На улице: Небольшой дождь"
-        case "rain":
+            case "rain":
             conditionLable.text = "На улице: Дождь"
-        case "moderate-rain":
+            case "moderate-rain":
             conditionLable.text = "На улице: Умеренно сильный дождь"
-        case "heavy-rain":
+            case "heavy-rain":
             conditionLable.text = "На улице: Сильный дождь"
-        case "continuous-heavy-rain":
+            case "continuous-heavy-rain":
             conditionLable.text = "На улице: Длительный сильный дождь"
-        case "showers":
+            case "showers":
             conditionLable.text = "На улице: Ливень"
-        case "wet-snow":
+            case "wet-snow":
             conditionLable.text = "На улице: Дождь со снегом"
-        case "light-snow":
+            case "light-snow":
             conditionLable.text = "На улице: Небольшой снег"
-        case "snow":
+            case "snow":
             conditionLable.text = "Погодные условия: Снег"
-        case "snow-showers":
+            case "snow-showers":
             conditionLable.text = "Погодные условия: Снегопад"
-        case "hail":
+            case "hail":
             conditionLable.text = "Погодные условия: Град"
-        case "thunderstorm":
+            case "thunderstorm":
             conditionLable.text = "Погодные условия: Гроза"
-        case "thunderstorm-with-rain":
+            case "thunderstorm-with-rain":
             conditionLable.text = "Погодные условия: Дождь с грозой"
-        case "thunderstorm-with-hail":
+            case "thunderstorm-with-hail":
             conditionLable.text = "Погодные условия: Гроза с градом"
-        default:
+            default:
             conditionLable.text = "Нет данных"
-            
-            switch info.fact.windDir {
+        }
+        switch info.fact.windDir {
             case "nw":
                 windDirLable.text = "Направление верта: Северо-Западное"
             case "n":
@@ -95,7 +95,6 @@ class InfoViewController: UIViewController {
             default:
                 windDirLable.text = "Нет данных"
             }
-        }
     }
     
 }

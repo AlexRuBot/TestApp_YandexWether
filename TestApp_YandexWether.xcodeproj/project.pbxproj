@@ -16,6 +16,7 @@
 		74ADD04D25BDBD6E00B5A8B5 /* WetherJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74ADD04C25BDBD6E00B5A8B5 /* WetherJSON.swift */; };
 		74E2E18B25BF276A00CD149E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E2E18A25BF276A00CD149E /* MainViewController.swift */; };
 		74E2E19025BF77E500CD149E /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E2E18F25BF77E500CD149E /* InfoViewController.swift */; };
+		74E2E19425BF947A00CD149E /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E2E19325BF947A00CD149E /* CustomTableViewCell.swift */; };
 		F14E932F8787591ED76C3F8D /* Pods_TestApp_YandexWether.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B72344A38A817FA2C633DAF /* Pods_TestApp_YandexWether.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		74ADD04C25BDBD6E00B5A8B5 /* WetherJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WetherJSON.swift; sourceTree = "<group>"; };
 		74E2E18A25BF276A00CD149E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		74E2E18F25BF77E500CD149E /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		74E2E19325BF947A00CD149E /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		DD49AF63C005289904850B50 /* Pods-TestApp_YandexWether.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp_YandexWether.debug.xcconfig"; path = "Target Support Files/Pods-TestApp_YandexWether/Pods-TestApp_YandexWether.debug.xcconfig"; sourceTree = "<group>"; };
 		EFADB9D4784F51B8416BCADF /* Pods-TestApp_YandexWether.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp_YandexWether.release.xcconfig"; path = "Target Support Files/Pods-TestApp_YandexWether/Pods-TestApp_YandexWether.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +75,7 @@
 				74ADD03925BDB5BF00B5A8B5 /* SceneDelegate.swift */,
 				74E2E18A25BF276A00CD149E /* MainViewController.swift */,
 				74E2E18F25BF77E500CD149E /* InfoViewController.swift */,
+				74E2E19325BF947A00CD149E /* CustomTableViewCell.swift */,
 				74ADD03D25BDB5BF00B5A8B5 /* Main.storyboard */,
 				74ADD04025BDB5C100B5A8B5 /* Assets.xcassets */,
 				74ADD04225BDB5C100B5A8B5 /* LaunchScreen.storyboard */,
@@ -217,6 +220,7 @@
 				74ADD04D25BDBD6E00B5A8B5 /* WetherJSON.swift in Sources */,
 				748CC85325BF03A6007B266D /* City.swift in Sources */,
 				74E2E18B25BF276A00CD149E /* MainViewController.swift in Sources */,
+				74E2E19425BF947A00CD149E /* CustomTableViewCell.swift in Sources */,
 				74ADD03825BDB5BF00B5A8B5 /* AppDelegate.swift in Sources */,
 				74E2E19025BF77E500CD149E /* InfoViewController.swift in Sources */,
 				74ADD03A25BDB5BF00B5A8B5 /* SceneDelegate.swift in Sources */,
